@@ -490,3 +490,21 @@ nav {
 .current{
 	background: #fff;
 }
+
+/*示例*/
+.imgs{
+	width: 100px;
+	height: 100px;
+	border-radius: 50%;
+	overflow: hidden;
+	background: #00C0A5;
+}
+.imgs img{
+	width: 100px;
+	height: 100px;
+	overflow: hidden;
+	transition: all 0.5s;
+}
+.imgs img:hover{
+	transform: scale(1.5);
+}
