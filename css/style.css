@@ -118,7 +118,7 @@ ul {
 
 ul li {
 	font: normal 1.3em "News Cycle", arial, sans-serif;
-	list-style-type: circle;
+	list-style: none;
 	margin: 0 0 0 0;
 	padding: 0 0 4px 5px;
 }
@@ -490,16 +490,24 @@ nav {
 .current{
 	background: #fff;
 }
-
 /*示例*/
 .imgs{
+	width: 380px;
+	height: 100px;
+	overflow: hidden;
+	background: #00C0A5;
+	border-radius: 10px;
+	display: flex;
+	justify-content: space-around;
+}
+.imgs>div{
 	width: 100px;
 	height: 100px;
 	border-radius: 50%;
 	overflow: hidden;
-	background: #00C0A5;
 }
 .imgs img{
+	border-radius: 50%;
 	width: 100px;
 	height: 100px;
 	overflow: hidden;
@@ -508,3 +516,69 @@ nav {
 .imgs img:hover{
 	transform: scale(1.5);
 }
+.imgs img.imgs_2:hover{
+	transform: rotateY(180deg);
+}
+.imgs img.imgs_3:hover{
+	transform: rotate(360deg);
+}
+
+/*3D*/
+#box_3d img {
+	width: 200px;
+	height: 300px;
+}
+
+#box_3d {
+	width: 200px;
+	height: 300px;
+}
+#box_3d .a {
+	width: 100%;
+	height: 100%;
+	display: block;
+	border: 1px solid red;
+	-webkit-transform-style: preserve-3d;
+	-webkit-transform: perspective(1000px);
+}
+
+#box_3d .a>div {
+	position: absolute;
+	top: 0;
+	left: 0;
+	transition: transform 0.5s;
+}
+
+#box_3d .a .front {
+	z-index: 8;
+	transform: rotateY(0deg);
+}
+
+#box_3d .a .back {
+	transform: rotateY(-180deg);
+}
+
+#box_3d:hover .front {
+	transform: rotateY(180deg);
+}
+
+#box_3d:hover .back {
+	z-index: 9;
+	transform: rotateY(0deg);
+}
+/*过度*/
+#d1:hover {
+    transform: translateX(100px) rotate(30deg) scale(1.5);
+    background-color: #808080;
+    border: solid 5px #9110ca;
+    transition: all ease-in 1s;
+}
+#d1 {
+	z-index: 1000;
+    width: 150px;
+    height: 150px;
+    border: solid 2px red;
+    background-color: #4cff00;
+    position: relative;
+}
+
