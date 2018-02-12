@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>css选项卡</title>
+		<style>
+			* {
+				margin: 0;
+				padding: 0;
+			}
+			
+			ul,
+			ol {
+				list-style: none;
+			}
+			
+			input,
+			textarea {
+				outline: none;
+				border: none;
+			}
+			
+			.box {
+				width: 500px;
+				height: 500px;
+				margin: 0 auto;
+			}
+			
+			.box ul li {
+				position: relative;
+				color: #fff;
+			}
+			
+			.box ul li input,
+			.box ul li .con {
+				display: none;
+			}
+			
+			.box ul li label {
+				display: block;
+				position: relative;
+				width: 60px;
+				height: 30px;
+				text-align: center;
+				color: #000;
+				line-height: 30px;
+				margin: 19px 0 0 5px;
+				border: 1px solid #003333;
+				border-radius: 5px 5px 0 0;
+				float: left;
+				cursor: pointer;
+			}
+			
+			.box ul li label:hover {
+				background: #ddd;
+			}
+			
+			.box ul li:nth-child(1) label {
+				margin-left: 80px;
+			}
+			
+			.box ul li input:checked~.con {
+				display: block;
+			}
+			
+			.box ul li input:checked~label {
+				z-index: 20;
+				background: #fff;
+				border-bottom-color: #fff;
+			}
+			
+			.box ul li .con {
+				border-radius: 5px;
+				width: 358px;
+				height: 358px;
+				padding: 20px;
+				border: 1px solid #003333;
+				background: #fff;
+				position: absolute;
+				color: #999;
+				top: 50px;
+				left: 50px;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div class="box">
+			<ul>
+				<li>
+					<input name="tabs" id="tab1" type="radio" checked />
+					<label for="tab1">选项一</label>
+					<div class="con">文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本111</div>
+				</li>
+				<li>
+					<input name="tabs" id="tab2" type="radio" />
+					<label for="tab2">选项二</label>
+					<div class="con">文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本222</div>
+				</li>
+				<li>
+					<input name="tabs" id="tab3" type="radio" />
+					<label for="tab3">选项三</label>
+					<div class="con">文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本333</div>
+				</li>
+				<li>
+					<input name="tabs" id="tab4" type="radio" />
+					<label for="tab4">选项四</label>
+					<div class="con">文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本444</div>
+				</li>
+				<li>
+					<input name="tabs" id="tab5" type="radio" />
+					<label for="tab5">选项五</label>
+					<div class="con">文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本文本555</div>
+				</li>
+			</ul>
+		</div>
+	</body>
+
+</html>
