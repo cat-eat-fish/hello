@@ -2,6 +2,8 @@
 <html>
 <head>
   <title>cat-eat-fish</title>
+  <!--网站小图标-->
+		<link href="img/fish.jpg" rel="icon" type="image/x-icon" />
   <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
   <link rel="stylesheet" type="text/css" href="css/style.css" />
 </head>
@@ -14,6 +16,7 @@
         <ul class="lavaLampWithImage" id="lava_menu">
           <li><a href="index.html">我的主页</a></li>
           <li><a href="examples.html">实例</a></li>
+          <li><a href="page.html">页面</a></li>
           <li class="current"><a href="contact.html">联系我</a></li>
         </ul>
       </nav>
@@ -85,15 +88,30 @@
           $answer = substr(md5($number_1+$number_2),5,10);
         ?>-->
         <form id="contact" action="contact.php" method="post">
-          <div class="form_settings">
-            <p><span>Name</span><input class="contact" type="text" name="your_name" value="" /></p>
-            <p><span>Email Address</span><input class="contact" type="text" name="your_email" value="" /></p>
-            <p><span>Message</span><textarea class="contact textarea" rows="5" cols="50" name="your_message"></textarea></p>
-            <p style="padding: 10px 0; line-height: 2em;">To help prevent spam, please enter the answer to this question:</p>
-            <p><span> +  = ?</span><input type="text" name="user_answer" /><input type="hidden" name="answer" value="" /></p>
-            <p style="padding-top: 15px"><span>&nbsp;</span><input class="submit" type="submit" name="contact_submitted" value="send" /></p>
-          </div>
-        </form>
+					<div class="form_settings">
+						<p>
+							<span>Name</span>
+							<input id="na" class="contact" type="text" name="your_name" value="" />
+							<p id="nameMess"></p>
+						</p>
+						<p>
+							<span>Email Address</span>
+							<input id="em" class="contact" type="text" name="your_email" value="" />
+							<p id="emMess"></p>
+						</p>
+						<p>
+							<span>Message</span>
+							<textarea id="me" class="contact textarea" rows="5" cols="50" name="your_message"></textarea>
+							<p id="meMess"></p>
+						</p>
+						<p style="padding: 10px 0; line-height: 2em;">To help prevent spam, please enter the answer to this question:</p>
+						<!--<p><span> +  = ?</span><input type="text" name="user_answer" /><input type="hidden" name="answer" value="" /></p>-->
+						<p style="padding-top: 15px">
+							<span>&nbsp;</span>
+							<input id="su" class="submit" type="submit" name="contact_submitted" value="send" />
+						</p>
+					</div>
+				</form>
       </div>
     </div>
     <footer>
@@ -103,5 +121,70 @@
   </div>
   <!--js-->
   	<script src="js/index.js"></script>
+  	<script src="js/jquery-3.1.1.js"></script>
 </body>
+		<script>
+			$('.contact').data({'s':0});
+  		//名字
+  		var na=document.getElementById('na');
+			na.onblur=checkName;
+			function checkName(){
+				var nameVal=na.value;
+				var showMess=document.getElementById('nameMess');
+//				var patt=/^\w+[@]\w+[.][\w.]+$/;
+				if(nameVal.length>=1&&nameVal.length<=20){
+					showMess.innerHTML='正确';
+					showMess.style.color='green';
+					$(this).data({'s':1})
+				}else{
+					showMess.innerHTML='错误';
+					showMess.style.color='red';
+					$(this).data({'s':0})
+				}
+			}
+  		//邮箱验证
+			var email=document.getElementById('em');
+			email.onblur=checkEmail;
+			function checkEmail(){
+				var emailVal=email.value;
+				var showMess=document.getElementById('emMess');
+				var patt=/^\w+[@]\w+[.][\w.]+$/;
+				if(patt.test(emailVal)){
+					showMess.innerHTML='正确';
+					showMess.style.color='green';
+					$(this).data({'s':1})
+				}else{
+					showMess.innerHTML='错误';
+					showMess.style.color='red';
+					$(this).data({'s':0})
+				}
+			}
+			//内容
+  		var me=document.getElementById('me');
+			me.onblur=checkMess;
+			function checkMess(){
+				var messVal=me.value;
+				var showMess=document.getElementById('meMess');
+				if(messVal.length>=20){
+					showMess.innerHTML='正确';
+					showMess.style.color='green';
+					$(this).data({'s':1})
+				}else{
+					showMess.innerHTML='最少书写20字以上';
+					showMess.style.color='red';
+					$(this).data({'s':0})
+				}
+			}
+			//提交按钮
+			$('form').submit(function(){
+				$('.contact').blur();
+				var tot=0;
+				$('.contact').each(function(){
+					tot+=$(this).data('s');
+				})
+				if(tot!=3){
+					return false;
+				}
+			})
+  	</script>
 </html>
