@@ -2,79 +2,143 @@
 <html>
 <head>
 <meta charset="utf-8">
-<title>多轮翻选项卡</title>
-<style>
+<title></title>
+<style type="text/css">
 	*{
-		padding: 0;
 		margin: 0;
+		padding: 0;
 		list-style: none;
-		
 	}	
-	.box{
-		width: 1000px;
-		height: 500px;
+	.out{
+		width: 520px;
+		height: 280px;
+		border: 3px solid red;
 		margin: 50px auto;
-		border: 1px solid red;
-	}
-	.nav{
-		float: left;
-	}
-	.nav li{
-		width: 200px;
-		height: 30px;
-		background: #999;
-		margin-bottom: 5px;
+		position: relative;
 		
 	}
-	.nav li.jd{
-		background:red;
-	}
-	.out{
-		width: 780px;
-		height: 500px;
-		float: right;
-		position:relative;
-	}
-	.lb{
-		height: 500px;
-		width: 780px;
+	.tu li{
+		
+		top: 0px;
+		left: 0px;
 		position: absolute;
-		border: 0;
+		display: none;
+	}
+	.shu{
+		position: absolute;
+		bottom: 10px;
+		left:0;
+		text-align: center;
+		width: 100%;
+		font-size: 0;
+	}
+	.shu li{
+		width: 20px;
+		height: 20px;
+		background: #333;
+		color: #fff;
+		text-align: center;
+		line-height: 20px;
+		font-size: 14px;
+		border-radius: 50%;
+		display: inline-block;/* 显示：内联块 */
+		margin: 0 5px;
+		cursor: pointer;/* 光标：提示 */
+	}
+	.shu li.active{
+		background-color: #a00;
+	}
+	.out .btn{
+		width: 30px;
+		height: 60px;
+		background: rgba(0,0,0,0.3);
+		color: #fff;
+		font-size: 20px;
+		text-align: center;
+		line-height: 60px;
+		position: absolute;
+		top:50%;
+		margin-top: -30px;
+		cursor: pointer;/* 光标：提示 */
+	}
+	.out .left{
+		left: 0;
+	}
+	.out .right{
+		right: 0;
 	}
 	
 	
 </style>
-<script type="text/javascript" src="js/jquery1.42.min.js"></script>
+	<script type="text/javascript" src="js/jquery1.42.min.js"></script>
 <script type="text/javascript">
 	$(function(){
-		$(".nav li").first().addClass("jd")
-		$(".lb").first().show();
-		$(".nav li").click(function(){
-			$(this).addClass("jd").siblings().removeClass("jd")
-			var index=$(this).index();
-			$(".lb").eq(index).fadeIn().siblings().fadeOut();	
-		})	
-	})	
+		//初始化
+		$(".tu li").first().show();
+		$(".shu li").first().addClass("active");
+		//手动控制图片的淡入淡出
+		$(".shu li").click(function(){
+			$(this).addClass("active").siblings("li").removeClass("active");
+			var index = $(this).index();
+			i=index
+			$(".tu li").eq(index).fadeIn().siblings().fadeOut();
+		})
+		//通过时间间隔函数，控制图片的显示
+		var i=0;
+		var t = setInterval(move,2000);
+		//动画运行核心函数
+		function move(){
+			i++
+			if(i==4){
+			   i=0;
+			   }
+			$(".shu li").eq(i).addClass("active").siblings().removeClass("active");
+			$(".tu li").eq(i).fadeIn().siblings().fadeOut();
+		}
+		//鼠标移入out元素时，停掉动画
+		$(".out").hover(function(){
+			clearInterval(t);
+		},function(){
+			t = setInterval(move,2000);
+		})		
+		//点击左边执行动画
+		function moveL(){
+			i--
+			if(i==-1){
+			   i=3;
+			   }
+			$(".shu li").eq(i).addClass("active").siblings().removeClass("active")
+			$(".tu li").eq(i).fadeIn().siblings().fadeOut();
+	
+		};
+		$(".out .left").click(function(){
+			moveL();
+			
+		})
+		//点击右边执行动画
+		$(".out .right").click(function(){
+			move();
+		});		
+	});
 </script>
 </head>
 
 <body>
-<div class="box">
-	<ul class="nav">
-		<li></li>
-		<li></li>
-		<li></li>
-		<li></li>
+<div class="out">
+	<ul class="tu">
+		<li><a href="#" target="_blank"><img src="images/a.jpg"></a></li>
+		<li><a href="#" target="_blank"><img src="images/b.jpg"></a></li>
+		<li><a href="#" target="_blank"><img src="images/c.jpg"></a></li>
+		<li><a href="#" target="_blank"><img src="images/d.jpg"></a></li>
 	</ul>
-	<div class="out">
-		<iframe src="one.html" class="lb"></iframe>
-		<iframe src="two.html" class="lb"></iframe>
-		<iframe src="three.html" class="lb"></iframe>
-		<iframe src="four.html" class="lb"></iframe>
-	</div>
-	
+	<ul class="shu">
+		<li>1</li>
+		<li>2</li>
+		<li>3</li>
+		<li>4</li>
+	</ul>
+  	<div class="btn left"><</div>
+  	<div class="btn right">></div>
 </div>
-
-
 </body>
 </html>
