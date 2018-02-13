@@ -1,1 +1,52 @@
-
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Our-Work</title>
+		<link type="text/css" rel="stylesheet" href="css/f_our.css" />
+		<style>
+			
+		</style>
+		<script src="../jquery-3.1.1/jquery-3.1.1.min.js"></script>
+		<script type="text/javascript">
+			
+		$(function(){
+			$("ul li").first().show();
+			$(".nav li").first().addClass("jd");
+			$(".nav li").click(function(){
+				$(this).addClass("jd").siblings().removeClass("jd")
+				var index=$(this).index();
+				$(".lb").eq(index).fadeIn().siblings().fadeOut();	
+			})	
+		})	
+		</script>
+	</head>
+	<body>
+			<div class="header">
+				<div class="logo"><a href=""><img src="img/2017-04-11_214420_03.jpg"></a></div>
+				<div class="nav">
+					<ul>
+						<li>Latest at Leo </li>
+						<li>Our Work</li>
+						<li>About Us</li>
+						<li>Working Here</li>
+						<li>Contact Us</li>
+					</ul>
+				</div>
+			</div>
+			<div class="center">	
+				<iframe src="one.html" class="lb"></iframe>
+				<iframe src="two.html" class="lb"></iframe>
+				<iframe src="three.html" class="lb"></iframe>
+				<iframe src="four.html" class="lb"></iframe>
+				<iframe src="five.html" class="lb"></iframe>
+				
+			</div>
+			<div class="footer">
+				<div class="footer_left"><a href=""> LEO BURNETT WORLDWIDE</a></div>
+				<div class="footer_right">© 2017  Leo Burnett Toronto •<a href=""> Privacy Policy</a></div>
+			</div>
+			
+		
+	</body>
+</html>

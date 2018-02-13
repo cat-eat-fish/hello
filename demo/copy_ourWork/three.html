@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		
+		<style>
+			*{
+				margin: 0;
+				padding: 0;
+				text-decoration: none;
+			}
+			 .no1{
+			 	width: 990px;
+			 	height: 557px;
+				display: flex;
+				justify-content: space-between;
+				flex-wrap: nowrap;
+				overflow: hidden;
+			}
+			.one{
+				position: relative;
+				float: left;
+			}
+			.one .img img{
+				width: 990px;
+				height: 557px;
+			}
+			.one .word{
+				width: 260px;
+				height: 504px;
+				background: #D5D5D5;
+				opacity: 0.9;
+				position: absolute;
+				top: 17px;
+				right: -16px;
+				box-shadow: 0 5px 5px #333;
+			}
+			.one .word .top{
+				width: 260px;
+				height: 63px;
+				margin: 0 auto;
+				line-height: 63px;
+				font-size: 22px;
+				font-family:Georgia, serif;
+				border-bottom: 1px solid #C7C6C5;
+				text-indent: 20px;
+			}
+			.one .word .main{
+				width: 260px;
+				height: 350px;
+				margin: 0 auto;
+				font-family:Georgia, serif;
+				padding-top: 11px;
+				border-top: 1px solid #fff;
+				border-bottom: 1px solid #C7C6C5;
+			}
+			.one .word .main .main_w{
+				width: 220px;
+				height: 364px;
+				margin: 0 auto;
+			}
+			.one .word .main .font h5{
+				
+			}
+			.one .word .main .font p{
+				font-size: 12px;
+			}
+			.one .word .main .btn{
+				margin-top: 20px;
+			}
+			.one .word .main .btn a{
+				color: #111;
+			}
+			.one .word .main .btn a:hover .btn_an{
+				background: #000;
+			}
+			.one .word .main .btn a:hover{
+				color: #817777;
+			}
+			.one .word .main .btn a .btn_an{
+				width: 25px;
+				height: 25px;
+				color: #fff;
+				text-align: center;
+				line-height: 25px;
+				background: #676767;
+				border-radius: 50%;
+				float: left;
+				
+			}
+			.one .word .main .btn a span{
+				line-height: 25px;
+				margin-left: 8px;
+			}
+			.one .word .main .lj{
+				margin-top: 8px;
+			}
+			.one .word .main .lj .face{
+				width: 16px;
+				height: 16px;
+				background: #4267B2;
+				float: left;
+				text-align: center;
+				line-height: 16px;
+				
+			}
+			.one .word .main .lj .face a{
+				font-weight: 800;
+				color: #fff;
+			}
+			.one .word .main .lj .face a:hover{
+				opacity: 0.7;
+			}
+			.one .word .main .lj .weibo{
+				width: 16px;
+				height: 16px;
+				background: #4267B2;
+				text-align: center;
+				line-height: 16px;
+				float: left;
+				margin-left: 10px;
+			}
+			.one .word .main .lj .weibo a{
+				font-weight: 800;
+				color: #fff;
+			}
+			.one .word .main .lj .weibo a:hover{
+				opacity: 0.7;
+			}
+			.one .word .main .lj .renren{
+				width: 16px;
+				height: 16px;
+				background: #4267B2;
+				text-align: center;
+				line-height: 16px;
+				float: left;
+				margin-left: 10px;
+			}
+			.one .word .main .lj .renren a{
+				font-weight: 800;
+				color: #fff;
+			}
+			.one .word .main .lj .renren a:hover{
+
+				opacity: 0.7;
+			}
+			.one .word .foot{
+				border-top: 1px solid #fff;
+				padding-left: 20px;
+				padding-top: 10px;
+			}
+			.one .word .foot{
+				font-size: 12px;
+				color: #fff;
+				text-align: center;
+				line-height: 20px;
+			}
+			.one .word .foot .a1{
+				cursor: pointer;
+				width: 20px;
+				height: 20px;
+				background: #333;
+				border-radius: 50%;
+				float: left;
+				margin-left: 5px;
+			}
+			.one .word .foot .a1 .active{
+				background: red;
+			}
+		</style>
+		<script src="../jquery-3.1.1/jquery-3.1.1.min.js"></script>	
+		<script>
+			$(function(){
+	        	var i;
+				$(".a1").click(function(){
+					$(this).addClass("active").siblings(".one").removeClass("active");
+					
+					
+					var index = $(this).index();
+					i=index
+					$(".one").eq(index).fadeIn().siblings().fadeOut();
+				});
+			});
+		</script>
+		
+	</head>
+	<body>
+		<div class="no1">
+					
+							<div class="one">
+											<div class="img"><img src="img/2017-04-14_144428.jpg"></div>
+											<div class="word">
+												<div class="top">TD</div>
+												<div class="main">
+													<div class="main_w">
+														<div class="font"><h5>Cat</h5>
+															<p>We were challenged to get people to stop and think about the way they think about homeless youth. If we could make them conscious of it, chances were they’d see the issue as something they could play a part in changing. The end goal: get them to see the potential in homeless youth and donate or act. This campaign helped Raising the Roof reach well beyond their goal of engaging 65,000 people to donate or act.</p>
+														</div>
+														<div class="btn">
+															<a href="">
+																<div class="btn_an">▲</div>
+																<span>watch</span>
+															</a>
+														</div>
+														<div class="lj">
+															<div class="face"><a href="">f</a></div>
+															<div class="weibo"><a href="">微</a></div>
+															<div class="renren"><a href="">人</a></div>
+														</div>
+													</div>
+												</div>
+												<div class="foot">
+													<div class="a1">1</div>
+													<div class="a1">2</div>
+													<div class="a1">3</div>
+												</div>
+											</div>
+										</div>
+							<div class="one">
+											<div class="img"><img src="img/2017-04-14_144521.jpg"></div>
+											<div class="word">
+												<div class="top">IKEA</div>
+												<div class="main">
+													<div class="main_w">
+														<div class="font"><h5>#RetireReady</h5>
+															<p>The 15 years approaching retirement can be a time of mixed emotions for pre-retirees. With questions like “Will I be ready?" and "Do I have enough?” recurring, we set out to reassure them that those years can be an opportunity to confidently get ready for retirement, while still living the life they want. The net takeaway: With the help of TD, there really is no better time to get #RetireReady.</p>
+														</div>
+														<div class="btn">
+															<a href="">
+																<div class="btn_an">▲</div>
+																<span>watch</span>
+															</a>
+														</div>
+														<div class="lj">
+															<div class="face"><a href="">f</a></div>
+															<div class="weibo"><a href="">微</a></div>
+															<div class="renren"><a href="">人</a></div>
+														</div>
+													</div>
+												</div>
+												<div class="foot">
+													<div class="a1">1</div>
+													<div class="a1">2</div>
+													<div class="a1">3</div>
+												</div>
+											</div>
+										</div>		
+							<div class="one">
+											<div class="img"><img src="img/2017-04-14_144612.jpg"></div>
+											<div class="word">
+												<div class="top">TD</div>
+												<div class="main">
+													<div class="main_w">
+														<div class="font"><h5>That’s Unsure-ance</h5>
+															<p>We developed a series of Home Insurance spots focusing on those moments when people suddenly get a niggling feeling about their insurance coverage. With TD, of course, you can avoid those moments of "Unsure-ance."</p>
+														</div>
+														<div class="btn">
+															<a href="">
+																<div class="btn_an">▲</div>
+																<span>watch</span>
+															</a>
+														</div>
+														<div class="lj">
+															<div class="face"><a href="">f</a></div>
+															<div class="weibo"><a href="">微</a></div>
+															<div class="renren"><a href="">人</a></div>
+														</div>
+													</div>
+												</div>
+												<div class="foot">
+													<div class="a1">1</div>
+													<div class="a1">2</div>
+													<div class="a1">3</div>
+												</div>
+											</div>
+										</div>		
+						</div>
+
+	</body>
+</html>
