@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>hellow</title>
+		<style>
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			.box{
+				
+				perspective: 1000px;	
+				
+			}
+			.box .w{
+				width: 200px;
+				height: 200px;
+				margin: 100px auto;	
+				transform: rotateX(-30deg) rotateY(45deg);	
+				position: relative;
+				transform-style: preserve-3d;
+			}
+			.box .div{
+				width: 200px;
+				height: 200px;
+				background: aqua;
+				text-align: center;
+				font-weight: bold;
+				line-height: 200px;
+				border: 1px solid #000;
+				position: absolute;
+				top: 1px;
+				left: 1px;
+				opacity: 0.5;
+			}
+			.box .face{
+				transform: translateZ(100px);
+			}
+			.box .back{
+				transform: translateZ(-100px) rotateY(180deg);
+			}
+			.box .left{
+				transform: translateX(-100px) rotateY(-90deg);
+			}
+			.box .right{ 
+				transform: translateX(100px) rotateY(90deg);
+			}
+			.box .top{
+				transform: translateY(-100px) rotateX(90deg);
+			}
+			.box .bottom{
+				transform: translateY(100px) rotateX(-90deg);
+			}
+		</style>
+	</head>
+	<body>
+		<div class="box">
+			<div class="w">
+				<div class="div top">顶</div>
+				<div class="div face">前</div>
+				<div class="div bottom">下</div>
+				<div class="div back">后</div>
+				<div class="div left">左</div>
+				<div class="div right">右</div>
+			</div>
+			
+		</div>
+		
+	</body>
+</html>
