@@ -1,0 +1,80 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>多轮翻选项卡</title>
+<style>
+	*{
+		padding: 0;
+		margin: 0;
+		list-style: none;
+		
+	}	
+	.box{
+		width: 1000px;
+		height: 500px;
+		margin: 50px auto;
+		border: 1px solid red;
+	}
+	.nav{
+		float: left;
+	}
+	.nav li{
+		width: 200px;
+		height: 30px;
+		background: #999;
+		margin-bottom: 5px;
+		
+	}
+	.nav li.jd{
+		background:red;
+	}
+	.out{
+		width: 780px;
+		height: 500px;
+		float: right;
+		position:relative;
+	}
+	.lb{
+		height: 500px;
+		width: 780px;
+		position: absolute;
+		border: 0;
+	}
+	
+	
+</style>
+<script type="text/javascript" src="js/jquery1.42.min.js"></script>
+<script type="text/javascript">
+	$(function(){
+		$(".nav li").first().addClass("jd")
+		$(".lb").first().show();
+		$(".nav li").click(function(){
+			$(this).addClass("jd").siblings().removeClass("jd")
+			var index=$(this).index();
+			$(".lb").eq(index).fadeIn().siblings().fadeOut();	
+		})	
+	})	
+</script>
+</head>
+
+<body>
+<div class="box">
+	<ul class="nav">
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+	</ul>
+	<div class="out">
+		<iframe src="one.html" class="lb"></iframe>
+		<iframe src="two.html" class="lb"></iframe>
+		<iframe src="three.html" class="lb"></iframe>
+		<iframe src="four.html" class="lb"></iframe>
+	</div>
+	
+</div>
+
+
+</body>
+</html>
