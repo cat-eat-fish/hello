@@ -5,7 +5,7 @@ header("Content-type: text/html; charset=utf-8");
 	$yourname = stripslashes(strip_tags($_POST['your_name']));
     $yourmessage = stripslashes(strip_tags($_POST['your_message']));
 
-    $str=$youremail.','.$yourname.','.$yourmessage;
+    $str=$yourname.','.$youremail.','.$yourmessage;
 
     $fh=fopen('hello.txt', 'a');
 	fwrite($fh,$str);
