@@ -1,0 +1,261 @@
+@import url("base.css");
+/*顶部*/
+a,img,span{
+	display: block;
+	font-size: 0.16rem;
+	
+}
+header{
+	width: 100%;
+	height: 0.91rem;
+	background: #fff;
+	position: fixed;
+	z-index: 9999;
+}
+header .head{
+	height: 0.49rem;
+	border-bottom: 0.01rem solid #ebeaef;
+	display: flex;
+	justify-content: space-between;
+}
+header .head .head-l{
+	width: 0.4rem;
+	height: 100%;
+}
+header .head .head-m{
+	width: 0.38rem;
+	height: 100%;
+	margin: 0 auto;
+	font-size: 0.18rem;
+	color: #000;
+	line-height: 0.49rem;
+}
+header .head-r{
+	width: 0.49rem;
+	height:100%;
+}
+header .head-r a{
+	display: block;
+	width: 0.35rem;
+	line-height: 0.49rem;
+	height: 0.16rem;
+	font-size: 0.16rem;
+	color: #f87877;
+}
+/*搜索框*/
+.search{
+	width: 100%;
+	height: 0.42rem;
+	display: flex;
+	justify-content: space-between;
+}
+.search .search-l{
+	width: 3.06rem;
+	height: 100%;
+	background: #f5f4fa;
+	display: flex;
+	justify-content: center;
+	border-right:0.01rem solid #ebebed;
+	align-items: center;
+}
+.search input{
+	outline: none;
+	border: 0.01rem solid #eeedf2;
+	border-left: none;
+	width: 2.46rem;
+	height: 0.36rem;
+	border-radius: 0 0.05rem 0.05rem 0;
+}
+.search input::-webkit-input-placeholder {/*Chrome/Safari*/
+    color:#9e9e9e;
+    font-size: 0.14rem;
+}
+.search .fdj{
+	width: 0.34rem;
+	height: 0.34rem;
+	background: #fff;
+	color: #b9b9b9;
+	border: 0.01rem solid #eeedf2;
+	border-right: none;
+	border-radius: 0.05rem 0 0 0.05rem;
+}
+.search .fdj i.icon-fangdajing{
+	display: block;
+	font-size: 0.16rem;
+	line-height: 0.34rem;
+	text-align: center;
+}
+.search .search-r{
+	width: 0.43rem;
+	height: 0.42rem;
+	background: #fff;
+	
+}
+.search .search-r i{
+	display: block;
+	font-size: 0.14rem;
+	text-align: center;
+	line-height: 0.43rem;
+}
+/*内容*/
+.main{
+	width: 100%;
+	height: 6.19rem;
+	padding-top: 0.91rem;
+}
+.main ul.item{
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	align-content: space-between;
+}
+.main ul.item li{
+	width: 1.73rem;
+	height: 1.73rem;
+}
+.main ul.item li a{
+	width: 100%;
+	height: 100%;
+	position: relative;
+}
+.main ul.item li a .txt{
+	width: 1rem;
+	height: 0.3rem;
+	color: #fff;
+	position: absolute;
+	top: 0.12rem;
+	left: 0.12rem;
+}
+.main ul.item li a .txt .tit{
+	font-size: 0.18rem;
+	
+}
+.main ul.item li a .txt .con{
+	font-size: 0.12rem;
+}
+.main ul.item li a .imgs{
+	width: 100%;
+	height: 100%;
+}
+.main ul.item li a .imgs img{
+	width: 100%;
+	height: 100%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

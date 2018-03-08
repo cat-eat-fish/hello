@@ -1,0 +1,61 @@
+@import url("base.css");
+/*头部*/
+a,img,span{
+	display: block;
+	font-size: 0.14rem;
+	color:#444;
+}
+body{
+	background: url(../img/bgimg2-op.png) no-repeat;
+	background-size: 100%;
+}
+@
+.ch{
+	width: 0.34rem;
+	height: 0.48rem;
+	display: flex;
+	justify-content: flex-end;
+	align-items: flex-end;
+	text-align: end;
+	line-height: 0.80rem;
+}
+.ch a{
+	width: 100%;
+	height: 100%;
+	color: #ccc;
+}
+/*表单*/
+form{
+	width: 2.84rem;
+	height: 1.5rem;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: flex-end;
+	align-content: space-between;
+	margin: 0 auto;
+}
+form input{
+	display: block;
+	border: none;
+	outline: none;
+	width: 2.84rem;
+	height: 0.59rem;
+	color: #fff;
+	background: none;
+	border-bottom: 0.01rem solid #fff;
+}
+form input::-webkit-input-placeholder{
+	font-size: ;
+	color: #d5d9e2;
+}
+a.land{
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 0.54rem;
+	background: #a50448;
+	color: #fff;
+	text-align: center;
+	line-height: 0.54rem;
+}

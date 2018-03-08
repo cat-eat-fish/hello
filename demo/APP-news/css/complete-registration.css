@@ -1,0 +1,120 @@
+@import url("base.css");
+a,img,span{
+	display: block;
+	font-size: 0.16rem;
+}
+body{
+	width: 100%;
+	height: 100%;
+	background: url(../img/bgimg2-op.png) no-repeat;
+	background-size: 100%;
+}
+/*性别选择提示*/
+.xb{
+	width: 100%;
+	height: 0.39rem;
+	background: rgba(182,40,29,0.9);
+	position: fixed;
+	z-index: 999;
+	top: 0;
+	left: 0;
+	text-align: center;
+	line-height: 0.39rem;
+	font-size: 0.14rem;
+	color: #fff;
+}
+/*顶部*/
+header{
+	width: 100%;
+	height: 0.5rem;
+}
+header .head-l{
+	width: 0.5rem;
+	height: 0.5rem;
+	display: flex;
+	justify-content: flex-start;
+}
+header .head-l a{
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: flex-end;
+	color: #fff;
+	font-size: 0.5rem;
+}
+/*内容*/
+section.select{
+	width: 100%;
+	height: 1.17rem;
+	padding-top: 0.5rem;
+	margin-top: 0.38rem;
+	display: flex;
+	justify-content: center;
+	align-content: center;
+	flex-wrap: wrap;
+}
+section.select .xj{
+	width: 0.84rem;
+	height: 0.84rem;
+	border-radius: 50%;
+	border: 0.01rem solid #fff;
+	background: transparent;
+	display: flex;
+	justify-content: center;
+}
+section.select .xj img{
+	width: 100%;
+	height: 100%;
+	border-radius: 50%;
+}
+section.select .gender{
+	padding-top: 0.19rem;
+	width: 100%;
+	height: 0.14rem;
+	font-size: 0.12rem;
+	color: #ccc;
+	display: flex;
+	justify-content: center;
+}
+section.select .gender .w{
+	width: 1.24rem;
+	height: 100%;
+	display: flex;
+	justify-content: space-between;
+}
+
+section.select .gender .n{
+	width: 0.48rem;
+	height: 100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+section.select .gender .n input{
+	width: 0.112rem;
+	height: 0.12rem;
+	border: 0.01rem solid #96959a;
+	outline: none;
+	background: transparent;
+}
+/*固定底部*/
+footer{
+	width: 100%;
+	height: 0.53rem;
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	z-index: 999;
+	display: flex;
+	flex-wrap: wrap;
+}
+footer a{
+	width: 100%;
+	height: 100%;
+	text-align: center;
+	line-height: 0.53rem;
+	background: #a40347;
+	font-size: 0.14rem;
+	color: #fff;
+}

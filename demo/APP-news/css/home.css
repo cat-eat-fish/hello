@@ -1,0 +1,128 @@
+@import url("base.css");
+/*头部*/
+a,img,span{
+	display: block;
+	font-size: 0.14rem;
+	color:#444;
+}
+body{
+	background: url(../img/bgimg2.png) no-repeat;
+	background-size: 100%;
+}
+.bgimg{
+	width: 100%;
+	height:100%;
+}
+.bgimg img{
+	width: 100%;
+	height: 50%;
+}
+/*固定底部*/
+.tit{
+	width: 1.5rem;
+	height: 0.58rem;
+	position: fixed;
+	bottom: 1.8rem;
+	left: 1rem;
+	
+}
+.tit p{
+	color: #fff;
+	font-size: 0.14rem;
+	text-align: center;
+}
+.tit p:nth-of-type(1){
+	font-size: 0.5rem;
+}
+.tit p:nth-of-type(1) span{
+	display: inline;
+	font-size: 0.5rem;
+	color: #ca2d7a;
+}
+section{
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 1.3rem;
+	z-index: 999;
+}
+section a{
+	width: 100%;
+	height: 50%;
+	font-size: 0.16rem;
+	color: #fff;
+	text-align: center;
+	line-height: 0.65rem;
+}
+section a:nth-of-type(1){
+	background: rgba(131,6,62,0.9);
+}
+
+section a:nth-of-type(2){
+	background: rgba(7,13,27,0.9);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

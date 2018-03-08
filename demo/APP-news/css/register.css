@@ -1,0 +1,155 @@
+@import url("base.css");
+/*头部*/
+a,img,span{
+	display: block;
+	font-size: 0.14rem;
+	color:#444;
+}
+body{
+	background: url(../img/bgimg2-op.png) no-repeat;
+	background-size: 100%;
+}
+/*顶部邮箱重复提示*/
+.ts{
+	width: 100%;
+	height: 0.38rem;
+	background: rgba(157,39,61,0.8);
+	position: fixed;
+	top: 0;
+	left: 0;
+	text-align: center;
+	line-height: 0.38rem;
+	color: #fff;
+	font-size: 0.12rem;
+}
+.ts a{
+	display: inline;
+	color: #fff;
+	text-decoration: underline;
+}
+/*中间邮箱确认提示*/
+.isemail{
+	display: none;
+	width: 2.96rem;
+	height: 1.26rem;
+	background: #fff;
+	border-radius: 0.1rem;
+	position: fixed;
+	z-index: 999;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	margin: auto;
+}
+.is-t{
+	width: 100%;
+	height: 0.78rem;
+	text-align: center;
+	font-size: 0.16rem;
+	color: #000;
+	font-weight: bold;
+	border-bottom: 0.01rem solid #d6dadd;
+}
+.is-t .ist{
+	line-height: 0.43rem;
+}
+.is-t .isc{
+	color: #878787;
+	font-size: 0.14rem;
+	font-weight: normal;
+}
+.is-c{
+	width: 100%;
+	height: 0.48rem;
+	border-top: 0.01rem solid #eeeff3;
+	display: flex;
+}
+.is-c a{
+	width: 50%;
+	height: 100%;
+	color: #3799f2;
+	border-right: 0.01rem solid #e0e1e5;
+	text-align: center;
+	line-height: 0.48rem;
+}
+.is-c a:nth-of-type(2){
+	border-right: none;
+	border-left: 0.01rem solid #e0e1e5;
+}
+/*叉号*/
+.ch{
+	width: 0.34rem;
+	height: 0.48rem;
+	display: flex;
+	justify-content: flex-end;
+	align-items: flex-end;
+	text-align: end;
+	line-height: 0.80rem;
+}
+.ch a{
+	width: 100%;
+	height: 100%;
+	color: #ccc;
+}
+/*表单*/
+form{
+	width: 2.84rem;
+	height: 1.5rem;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: flex-end;
+	align-content: space-between;
+	margin: 0 auto;
+}
+form input{
+	display: block;
+	border: none;
+	outline: none;
+	width: 2.84rem;
+	height: 0.59rem;
+	color: #fff;
+	background: none;
+	border-bottom: 0.01rem solid #595963;
+}
+form input:nth-of-type(1){
+	border-bottom: 0.01rem solid #fff;
+}
+form input:nth-of-type(2){
+	
+}
+form input:nth-of-type(4){
+	width: 0.12rem;
+	height: 0.12rem;
+	border: 0.01rem solid #515256;
+	background: transparent;
+	margin-top: 0.1rem;
+}
+span.xy{
+	font-size: 0.12rem;
+	color: #706e79;
+	line-height: 0.3rem;
+}
+span.xy a{
+	display: inline;
+}
+form input::-webkit-input-placeholder{
+	font-size: ;
+	color: #73767b;
+}
+
+form .wjmm{
+	display: flex;
+	align-self: flex-end;
+}
+a.land{
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 0.54rem;
+	background: #a50448;
+	color: #fff;
+	text-align: center;
+	line-height: 0.54rem;
+}

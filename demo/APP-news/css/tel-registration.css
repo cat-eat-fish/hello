@@ -1,0 +1,189 @@
+@import url("base.css");
+a,img,span{
+	display: block;
+	font-size: 0.16rem;
+}
+body{
+	background: #f2f1f6;
+}
+/*顶部*/
+header{
+	width: 100%;
+	height: 0.5rem;
+	background: #f75b5c;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 999;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+header .head-l{
+	width: 0.5rem;
+	height: 0.5rem;
+	
+}
+header .head-l a{
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: flex-end;
+	color: #fff;
+	font-size: 0.14rem;
+}
+header .head-l a i,header .head-l a span{
+	display: block;
+	font-size: 0.14rem;
+	text-align: center;
+	line-height: 0.50rem;
+}
+header .head-l a i{
+	line-height: 0.52rem;
+}
+header .head-m{
+	width: 0.5rem;
+	height: 0.5rem;
+	line-height: 0.5rem;
+	text-align: center;
+	font-size: 0.2rem;
+	color: #fff;
+}
+header .head-r{
+	width: 0.5rem;
+	height: 0.5rem;
+	
+}
+header .head-r a{
+	text-align: left;
+	line-height: 0.5rem;
+	color: #fff;
+	font-size: 0.14rem;
+}
+/*内容*/
+.main{
+	padding-top: 0.5rem;
+	width: 100%;
+	background: #f2f1f6;
+}
+/*注册项*/
+section.item{
+	width: 100%;
+	height: 0.33rem;
+	background: #fff;
+	display: flex;
+	justify-content: space-between;
+}
+section.item .item1{
+	width: 33.333333%;
+	height: 100%;
+}
+section.item .item1 a{
+	width: 100%;
+	height: 100%;
+	font-size: 0.14rem;
+	color: #efefef;
+	text-align: center;
+	line-height: 0.33rem;
+}
+section.item .active{
+	border-bottom: 0.01rem solid #f96565;
+}
+section.item .active a{
+	color: #4c4c4c;
+}
+/*form表单*/
+form{
+	width: 100%;
+	height: 0.97rem;
+	background: #fff;
+	margin-top: 0.22rem;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: flex-end;
+	align-content: center;
+	border-top: 0.01rem solid #e8e9eb;
+	border-bottom: 0.01rem solid #e8e9eb;
+}
+form .item{
+	width: 3.38rem;
+	height: 0.47rem;
+	display: flex;
+	justify-content: flex-start;
+	align-content: center;
+}
+form .item:nth-child(2) .yzm{
+	width: 2.08rem;
+	height: 100%;
+	display: flex;
+	
+}
+form .item:nth-child(2) .yzm input{
+	width: 1.48rem;
+	height: 0.47rem;
+}
+form .item:nth-child(2) .yzm{
+	width: ;
+}
+form .item:nth-child(2) .refetch{
+	width: 1.46rem;
+	height: 100%;
+	
+	background: #08dfbe;
+	color: #fff;
+	font-size: 0.12rem;
+}
+form .item:nth-child(2) .refetch a{
+	width: 100%;
+	height: 100%;
+	font-size: 0.12rem;
+	color: #fff;
+	text-align: center;
+	line-height: 0.47rem;
+}
+form .item span{
+	width: 0.5rem;
+	height: 100%;
+	text-align: center;
+	line-height: 0.48rem;
+	font-size: 0.14rem;
+	color: #2e2e2e;
+}
+form .item input{
+	border: none;
+	outline: none;
+	width: 3.08rem;
+	text-indent: 0.1rem;
+	font-size: 0.12rem;
+}
+form .item input::-webkit-input-placeholder{
+	color: #e0e0e0;
+	font-size: 0.12rem;
+}
+/*保存和协议*/
+section.preservation-agreement{
+	width: 3.25rem;
+	height: 0.32rem;
+	display: flex;
+	margin: 0 auto;
+	justify-content: space-between;
+}
+.preservation{
+	width: 2rem;
+	height: 100%;
+}
+.agreement{
+	width: 2rem;
+	height: 100%;
+	line-height: 0.32rem;
+	font-size: 0.12rem;
+	color: #939395;
+	display: flex;
+}
+.agreement a{
+	display: block;
+	font-size: 0.12rem;
+	text-decoration: underline;
+	color: #f76162;
+}
+

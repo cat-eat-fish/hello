@@ -1,0 +1,178 @@
+@import url("base.css");
+a,img,span{
+	display: block;
+	font-size: 0.16rem;
+}
+body{
+	width: 100%;
+	height: 100%;
+	background:#303531;
+}
+/*侧栏*/
+.set-up{
+	
+	width: 2.35rem;
+	height: 6rem;
+	background: #f7f6fb;
+	position: fixed;
+	bottom: 0;
+	right: -2.35rem;
+	z-index: 999;
+	border-left: 0.01rem solid #f0f0f2;
+	display: flex;
+	justify-content: center;
+}
+.set-up .item li{
+	width: 1.6rem;
+	height: 0.6rem;
+	border-bottom: 0.01rem solid #ebecf1;
+}
+.set-up .item{
+	margin-top: 0.94rem;
+}
+.set-up .item li a{
+	width: 100%;
+	height: 100%;
+	text-align: left;
+	line-height: 0.6rem;
+	color: #fd6965;
+	font-size: 0.14rem;
+	display: flex;
+	margin-left: 0.08rem;
+}
+.set-up .item li a span{
+	margin-left: 0.14rem;
+}
+
+/*顶部*/
+header{
+	width: 100%;
+	height: 0.5rem;
+	background: transparent;
+	position: fixed;
+	z-index: 999;
+	top: 0;
+	left: 0;
+	display: flex;
+	justify-content: space-between;
+}
+.head-l{
+	width: 0.34rem;
+	height: 100%;
+}
+.head-l a{
+	width: 100%;
+	height: 100%;
+	text-align: center;
+	line-height: 0.5rem;
+	color: #fff;
+}
+.head-r{
+	width: 0.52rem;
+	height: 100%;
+}
+.head-r a{
+	width: 100%;
+	height: 100%;
+	text-align: center;
+	line-height: 0.5rem;
+	color: #fff;
+}
+/*内容*/
+.main{
+	width: 100%;
+	height: 100%;
+	background: #303531;
+}
+.main .bgimg{
+	width: 100%;
+	height: 3.39rem;
+}
+.main .bgimg img{
+	width: 100%;
+	height: 100%;
+}
+.main .txt{
+	width: 100%;
+	height: 2rem;
+	
+	font-size: 0.16rem;
+	color: #fff;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+.main .txt .tit{
+	width: 3.25rem;
+	height: 0.7rem;
+	text-align: center;
+	line-height: 0.7rem;
+	display: flex;
+	margin: 0 auto;
+	justify-content: space-between;
+}
+.main .txt .tit .tit-l{
+	width: 2.6rem;
+	height: 100%;
+	display: flex;
+	font-size: 0.16rem;
+	align-self: flex-start;
+}
+.main .txt .tit .tit-r{
+	font-size: 0.12rem;
+}
+.main .txt .tit .tit-r span{
+	display: inline;
+	color: #fffd02;
+	font-size: 0.14rem;
+}
+.main .txt .fgx{
+	width: 3.25rem;
+	height: 0.01rem;
+	display: flex;
+	justify-content: flex-start;
+}
+.main .txt .fgx .xt{
+	width: 2.2rem;
+	height: 100%;
+	background: #5f605b;
+}
+.main .txt .author{
+	width: 3.25rem;
+	height: 0.37rem;
+	
+}
+.main .txt .author span{
+	display: inline;
+	width: 1.50rem;
+	height: 100%;
+	text-align: left;
+	line-height: 0.37rem;
+	font-size: 0.14rem;
+}
+.main .txt .con{
+	width: 3.25rem;
+	height: 0.8rem;
+}
+.main .txt .con span{
+	font-size: 0.14rem;
+}
+.main .icon{
+	width:100%;
+	height: 0.2rem;
+	display: flex;
+	justify-content: flex-end;
+	margin-top: 0.3rem;
+}
+.main .icon .item{
+	
+	width: 0.5rem;
+	height: 0.5rem;
+}
+.main .icon .item a{
+	color: #fff;
+	font-size: 0.16rem;
+	text-align: center;
+	line-height: 0.5rem;
+}
+

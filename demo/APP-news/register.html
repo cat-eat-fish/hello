@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+		<link rel="stylesheet" href="css/register.css" />
+		<script src="js/rem.js"></script>
+		<link rel="stylesheet" href="iconfont/iconfont.css" />
+		<title>登陆-land</title>
+	</head>
+	<body>
+		<!--顶部邮箱重复提示-->
+		<div class="ts">
+			您的邮箱注册过了^_^,是否<a href="forgot.html">忘记密码？</a>
+		</div>
+		<!--中间邮箱确认提示-->	
+		<div class="isemail">
+			<div class="is-t">
+				<div class="ist">
+					是否准确
+				</div>
+				<div class="isc">
+					你绑定的邮箱是:
+				</div>
+			</div>
+			<div class="is-c">
+				<a href="">
+					否
+				</a>
+				<a href="select-avatar2.html">
+					是的
+				</a>
+			</div>
+		</div>
+		<!--叉号-->
+		<div class="ch">
+			<a href="home.html">
+				<i class="iconfont icon-chahao1"></i>
+			</a>
+		</div>
+		<!--表单-->
+		<form action="">
+			<input type="email" placeholder="邮箱&nbsp;&nbsp;请输入登陆邮箱" />
+			<input type="password" placeholder="密码&nbsp;&nbsp;请输入登录密码，6~12位数字" />
+			<input type="text" placeholder="昵称&nbsp;&nbsp;请为自己起个响亮的名字" />
+			<input type="checkbox" checked="checked" name="xy" /><span class="xy">已阅读并同意<a href="">Bink服务条款</a></span>
+		</form>
+		<!--下一步-->
+		<a class="land" >
+			下一步
+		</a>
+		
+		
+	</body>
+	<script src="js/jquery-3.1.1.js"></script>
+	<script type="text/javascript">
+		//弹出重复邮箱提示
+		
+		//弹出确认框
+		$(".land").click(function(){
+			$(".isemail").css("display","block");
+		})
+	</script>
+</html>

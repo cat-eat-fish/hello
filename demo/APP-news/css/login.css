@@ -1,0 +1,252 @@
+@import url("base.css");
+a,img,span{
+	display: block;
+}
+body{
+	background: #f2f1f6 ;
+}
+/*顶部错误提示*/
+.error{
+	position: fixed;
+	z-index: 999;
+	display: none;
+	width: 100%;
+	height: 0.33rem;
+	background: #f75c5a;
+}
+.error p{
+	text-align: center;
+	line-height: 0.33rem;
+	font-size: 0.12rem;
+	color: #fff;
+}
+/*头像*/
+.portrait{
+	padding-top: 0.33rem;
+	width: 100%;
+	height: 1.44rem;
+	background: #f2f1f6;
+	display: flex;
+	justify-content: space-between;
+}
+.portrait .ch{
+	width: 0.16rem;
+	height: 0.16rem;
+	display: flex;
+	align-self: flex-start;
+	margin-left: 0.13rem;
+	
+}
+.portrait .ch a{
+	width: 100%;
+	height: 100%;
+	font-size: 0.16rem;
+	color: #8b8b8d;
+}
+.portrait .ch a i{
+	font-size: 0.16rem;
+}
+.portrait .headpor{
+	width: 0.85rem;
+	height: 0.85rem;
+	border-radius: 50%;
+	background: #fff;
+	display: flex;
+	margin-top: 0.08rem;
+}
+.portrait .headpor img{
+	width: 0.84rem;
+	height: 0.84rem;
+	border-radius: 50%;
+}
+/*输入框*/
+form{
+	width: 100%;
+	height: 0.98rem;
+	background: #fff;
+	border-top: 0.01rem solid #eff0f2;
+	border-bottom: 0.01rem solid #eff0f2;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: flex-end;
+}
+form .user{
+	width: 3.39rem;
+	height: 0.48rem;
+	background: #f5f4fa;
+	border-bottom: 0.01rem solid #ebecee;
+	display: flex;
+	justify-content: ;
+}
+form .user:nth-child(2){
+	border-bottom: none;
+	background: #fff;
+}
+form .user i{
+	display: block;
+	width: 0.28rem;
+	height: 100%;
+	text-align: center;
+	line-height: 0.49rem;
+	color: #cdcdcd;
+	background: #fff;
+}
+form .user input{
+	border: none;
+	width: 3.11rem;
+	height: 100%;
+	text-indent: 0.01rem;
+}
+form .user input:focus{
+	outline: none;
+}
+form .user:nth-child(2) .qc{
+	display: none;
+}
+/*忘记密码*/
+.forgot{
+	width: 100%;
+	height: 0.32rem;
+	display: flex;
+	justify-content: flex-end;
+}
+.forgot a{
+	width: 0.68rem;
+	height: 100%;
+	font-size: 0.12rem;
+	color: #afafb1;
+	line-height: 0.32rem;
+}
+/*登陆注册按钮*/
+section.btn{
+	width: 100%;
+	height: 0.96rem;
+	display: flex;
+	flex-wrap: wrap;
+	align-content: center;
+	justify-content: center;
+}
+section.btn button{
+	outline: none;
+	border: none;
+	border-radius: 0.05rem;
+	width: 3.28rem;
+	height: 0.48rem;
+	background: none;
+}
+section.btn button a{
+	width: 100%;
+	height: 100%;
+	color: #333335;
+	line-height: 0.48rem;
+	border-radius: 0.04rem;
+}
+section.btn button:nth-of-type(1) a{
+	background: #41b0f7;
+	color: #fff;
+	
+}
+/*qq微信新浪*/
+section.btn2{
+	margin-top: 0.57rem;
+	width: 100%;
+	height: 1.44rem;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-content: center;
+}
+section.btn2 button{
+	outline: none;
+	border: none;
+	border-radius: 0.05rem;
+	width: 3.28rem;
+	height: 0.48rem;
+	background: none;
+	
+}
+section.btn2 button a{
+	width: 100%;
+	height: 100%;
+	color: #333335;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

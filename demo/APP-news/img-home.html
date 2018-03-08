@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+		<link rel="stylesheet" href="css/img-home.css" />
+		<script src="js/rem.js"></script>
+		<link rel="stylesheet" href="iconfont/iconfont.css" />
+		<title>图片主页</title>
+	</head>
+	<body>
+		<!--侧栏-->
+		<div class="set-up">
+			<ul class="item">
+				<li>
+					<a href="">
+						<i class="iconfont icon-wujiaoxing"></i>
+						<span>收藏</span>
+					</a>
+				</li>
+				<li>
+					<a href="">
+						<i class="iconfont icon-Aa"></i>
+						<span>字体</span>
+					</a>
+				</li>
+				<li>
+					<a href="">
+						<i class="iconfont icon-13"></i>
+						<span>分享</span>
+					</a>
+				</li>
+				<li>
+					<a href="">
+						<i class="iconfont icon-lajitong"></i>
+						<span>清理缓存</span>
+					</a>
+				</li>
+				<li>
+					<a href="">
+						<i class="iconfont icon-iconset0399"></i>
+						<span>举报</span>
+					</a>
+				</li>
+			</ul>
+		</div>
+		<!--顶部-->
+		<header>
+			<div class="head-l">
+				<a href="img-index.html">
+					<i class="iconfont icon-zuo"></i>
+				</a>
+			</div>
+			<div class="head-r">
+				<a>
+					<i class="iconfont icon-asmkticon0165"></i>
+				</a>
+			</div>
+		</header>
+		<!--内容-->
+		<div class="main">
+			<div class="bgimg">
+				<img src="img/8c2d2d05e880f8532a85f0b80cc42959702118a3288e4-VP1Jf2_fw658.webp" alt="" />
+			</div>
+			<div class="txt">
+				<div class="tit">
+					<div class="tit-l">
+						DPR 2009摄影年度获奖作品
+					</div>
+					<div class="tit-r">
+						(<span>7</span>/12)
+					</div>
+				</div>
+				<div class="fgx">
+					<div class="xt"></div>
+				</div>
+				<div class="author">
+					<span>摄影师:David.Hstween</span>
+				</div>
+				<div class="con">
+					<span>我有一个梦想当个老船长每天出海、抽烟、晒网、看姑娘船员只有巴顿将军比我还懒的老狗偶尔看到漂亮姑娘也会扑闪扑闪他的狗眼睛</span>
+				</div>
+			</div>
+			<div class="icon">
+				<div class="item">
+					<a href="img-home-down.html">
+						<i class="iconfont icon-xiazai"></i>
+					</a>
+				</div>
+				<div class="item">
+					<a href="">
+						<i class="iconfont icon-xin"></i>
+					</a>
+				</div>
+				<div class="item">
+					<a href="">
+						<i class="iconfont icon-13"></i>
+					</a>
+				</div>
+			</div>
+		</div>
+	</body>
+	<script src="js/jquery-3.1.1.js"></script>
+	<script>
+		//显示侧栏
+		var isnow=$(".set-up").css("right");
+		if(isnow!=0){
+			$(".head-r").click(function(){
+				$(".set-up").css("right","0");
+			});
+		}
+	</script>
+</html>

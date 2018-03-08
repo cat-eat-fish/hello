@@ -1,0 +1,217 @@
+@import url("base.css");
+a,img,span{
+	display: block;
+	font-size: 0.16rem;
+}
+body{
+	width: 100%;
+	height: 100%;
+	background: #f2f1f6;
+}
+/*顶部*/
+header{
+	width: 100%;
+	height: 0.5rem;
+	background: #f75b5c;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 999;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+header .head-l{
+	width: 0.94rem;
+	height: 0.5rem;
+	display: flex;
+	justify-content: flex-start;
+}
+header .head-l a{
+	width: 0.5rem;
+	height: 100%;
+	display: flex;
+	justify-content: flex-end;
+	color: #fff;
+	font-size: 0.14rem;
+}
+header .head-l a i,header .head-l a span{
+	display: block;
+	font-size: 0.14rem;
+	text-align: center;
+	line-height: 0.50rem;
+}
+header .head-l a i{
+	line-height: 0.52rem;
+}
+header .head-l .ky{
+	width: 0.44rem;
+	height: 100%;
+}
+header .head-m{
+	width: 0.5rem;
+	height: 0.5rem;
+	line-height: 0.5rem;
+	text-align: center;
+	font-size: 0.2rem;
+	color: #fff;
+	display: flex;
+	align-self: center;
+}
+header .head-r{
+	width: 0.94rem;
+	height: 0.5rem;
+	
+}
+header .head-r a{
+	text-align: left;
+	line-height: 0.5rem;
+	color: #fff;
+	font-size: 0.14rem;
+}
+/*内容*/
+section.select{
+	width: 100%;
+	height: 1.17rem;
+	padding-top: 0.5rem;
+	margin-top: 0.38rem;
+	display: flex;
+	justify-content: center;
+	align-content: center;
+	flex-wrap: wrap;
+}
+section.select .xj{
+	width: 0.84rem;
+	height: 0.84rem;
+	border-radius: 50%;
+	background: #e1e0e5;
+	display: flex;
+	justify-content: center;
+}
+section.select .xj i{
+	font-size: 0.35rem;
+	color: #acacae;
+	text-align: center;
+	line-height: 0.84rem;
+}
+section.select .gender{
+	padding-top: 0.19rem;
+	width: 100%;
+	height: 0.14rem;
+	font-size: 0.12rem;
+	color: #ccc;
+	display: flex;
+	justify-content: center;
+}
+section.select .gender .w{
+	width: 1.24rem;
+	height: 100%;
+	display: flex;
+	justify-content: space-between;
+}
+
+section.select .gender .n{
+	width: 0.48rem;
+	height: 100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+section.select .gender .n input{
+	width: 0.112rem;
+	height: 0.12rem;
+	border: 0.01rem solid #96959a;
+	outline: none;
+	background: transparent;
+}
+/*固定底部*/
+footer{
+	width: 100%;
+	height: 1.16rem;
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	background: red;
+	z-index: 999;
+	display: flex;
+	flex-wrap: wrap;
+}
+footer button{
+	width: 100%;
+	outline: none;
+	background: #fff;
+	border: none;
+}
+footer button a{
+	width: 100%;
+	height: 100%;
+	background: #fff;
+	font-size: 0.12rem;
+	color: #000;
+}
+footer button:nth-child(1){
+	border-top: 0.02rem solid #e7e7e9;
+	border-bottom: 0.02rem solid #e7e7e9;
+}
+footer button:nth-child(2){
+	border-bottom: 0.01rem solid #e7e7e9;
+}
+footer button:nth-child(3) a{
+	color: #fe6e77;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

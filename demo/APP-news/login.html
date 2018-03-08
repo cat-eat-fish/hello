@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+		<link rel="stylesheet" href="css/login.css" />
+		<script src="js/rem.js"></script>
+		<link rel="stylesheet" href="iconfont/iconfont.css" />
+		<title>登陆</title>
+	</head>
+	<body>
+		<!--顶部错误提示-->
+		<div class="error">
+			<p>您的密码写错啦~T_T快点改过来~</p>
+		</div>
+		<!-- 头像 -->
+		<div class="portrait">
+			<div class="ch">
+				<a href="home.html">
+					<i class="iconfont icon-chahao1"></i>
+				</a>
+			</div>
+			<div class="headpor">
+				<img src="img/bmimg.PNG" alt="" />
+			</div>
+			<div class="ch">
+			</div>
+		</div>
+		<!--输入栏-->
+		<form action="" method="">
+			<div class="user">
+				<i class="iconfont icon-yonghu"></i>
+				<input type="text" />
+			</div>
+			<div class="user">
+				<i class="iconfont icon-password"></i>
+				<input type="password" />
+				<div class="qc">
+					<i class="iconfont icon-chahao"></i>
+				</div>
+			</div>
+		</form>
+		<!--忘记密码-->
+		<div class="forgot">
+			<a href="forgot.html" >
+				忘记密码?
+			</a>
+		</div>
+		<!--登陆注册按钮-->
+		<section class="btn">
+			<button type="submit">
+				<a class="dl" type="">
+					登陆
+				</a>
+			</button>
+			<button type="button">
+				<a href="email-registration.html">
+					注册
+				</a>
+			</button>
+		</section>
+		<!--qq微信新浪-->
+		<section class="btn2">
+			<button type="button">
+				<a href="">QQ账号</a>
+			</button>
+			<button type="button">
+				<a href="">
+					微信账号
+				</a>
+			</button>
+			<button type="button">
+				<a href="">
+					新浪微博
+				</a>
+			</button>
+		</section>
+	</body>
+	<script src="js/jquery-3.1.1.js"></script>
+	<script>
+		$(".dl").click(function(){
+			$('.error').css("display","block")
+		})
+	</script>
+</html>

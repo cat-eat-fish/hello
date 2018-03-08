@@ -1,0 +1,137 @@
+@import url("base.css");
+a,img,span{
+	display: block;
+	font-size: 0.16rem;
+}
+body{
+	background: #f0eff5;
+}
+/*顶部*/
+header{
+	width: 100%;
+	height: 0.51rem;
+	background: #fff;
+	position: fixed;
+	border-bottom: 0.01rem solid #efefef;
+	z-index: 999;
+	top: 0;
+	left: 0;
+	display: flex;
+	justify-content: space-between;
+}
+.head-l{
+	width: 0.34rem;
+	height: 100%;
+}
+.head-l a{
+	width: 100%;
+	height: 100%;
+	text-align: center;
+	line-height: 0.5rem;
+	color: #858585;
+}
+.head-r{
+	width: 0.52rem;
+	height: 100%;
+}
+.head-r a{
+	width: 100%;
+	height: 100%;
+	text-align: center;
+	line-height: 0.5rem;
+	color: #858585;
+}
+/*内容*/
+.mainimg{
+	width: 100%;
+	height: 1.55rem;
+	padding-top: 0.51rem;
+}
+.mainimg img{
+	width: 100%;
+	height: 100%;
+}
+.pl{
+	width: 100%;
+	height: 0.38rem;
+	display: flex;
+	justify-content: space-between;
+	background: #f0eff5;
+}
+.pl-l{
+	width: 0.3rem;
+	height: 0.38rem;
+	text-align: center;
+	line-height: 0.38rem;
+	color: ;
+}
+.pl-m{
+	width: 1rem;
+	height: 0.4rem;
+	text-align: center;
+	line-height: 0.4rem;
+	font-size: 0.18rem;
+	color: #67666b;
+}
+textarea{
+	width: 3.28rem;
+	height: 0.78rem;
+	background: #fff;
+	border: none;
+	border-radius: 0.04rem;
+	resize: none;
+	outline: none;
+	border: 0.01rem solid #eaeaec;
+	display: flex;
+	justify-content: center;
+	margin: 0 auto;
+	text-indent: 0.05rem;
+}
+textarea::-webkit-input-placeholder{
+	font-size: 0.12rem;
+	color: #bababa;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

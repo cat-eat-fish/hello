@@ -1,0 +1,670 @@
+*{
+	margin: 0;
+	padding: 0;
+	font-family: "微软雅黑";
+	text-align: center;
+	list-style: none;
+	text-decoration: none;
+}
+body{3
+	background: #F2F2F2;
+}
+/*顶部	广告条+导航*/
+/*广告条*/
+header .banner{
+	width: 100%;
+	height: 40px;
+	background: #444;
+}
+.banner main{
+	height: 100%;
+	background: #444;
+	margin: 0 auto;
+}
+.banner main div{
+	float: right;
+	line-height: 40px;
+	font-size: 12px;
+	color: #a8a8a8;
+}
+/*导航*/
+nav.nav-top{
+	width: 100%;
+	height: 44px;
+	background: #040404;
+}
+nav.nav-top ul{
+	height: 100%;
+	margin: 0 auto;
+	text-align: justify;
+}
+nav.nav-top ul::after{
+	content: "";
+	display: inline-block;
+	height: 0;
+	width: 100%;
+}
+nav.nav-top ul li{
+	display: inline-block;
+}
+nav.nav-top ul.nav-ipad{
+	display: none;
+}
+nav.nav-top ul li a{
+	font-size: 14px;
+	color: #fff;
+	line-height: 44px;
+	transition: all 0.3s;
+}
+nav.nav-top ul li a:hover{
+	color: #9C9C9C;
+	
+}
+
+/*轮播*/
+section.solid{
+	width: 100%;
+	position: relative;
+	/*overflow: hidden;*/
+}
+section.solid ul.solid-img{
+	
+}
+section.solid ul.solid-img,section.solid ul.solid-img li{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+section.solid ul.solid-img li a{
+	display: block;
+	width: 100%;
+	height: 100%;
+	color: #fff;
+	overflow: hidden;
+	position: absolute;
+	top: 0;
+	left: 0;
+	
+}
+section.solid ul.solid-img li a h1{
+	margin-top: 70px;
+	/*line-height: 148px;*/
+	font-weight: normal;
+	font-size: 30px;
+	text-align: center;
+}
+section.solid ul.solid-img li a h2{
+	font-weight: normal;
+	display: block;
+	font-size: 40px;
+	text-align: center;
+	/*line-height: 0px;*/
+	text-indent: 20px;
+}
+section.solid:hover .solid-left,section.solid:hover .solid-right{
+	opacity: 1;
+}
+section.solid .solid-left,section.solid .solid-right{
+	opacity: 0;
+	width: 64px;
+	height: 64px;
+	border-radius: 50%;
+	background: #2A2A2A;
+	font-size: 40px;
+	color: #000;
+	text-align: center;
+	line-height: 64px;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	margin-top: auto;
+	margin-bottom: auto;
+	cursor: pointer;
+	transition: all 0.3s;
+}
+section.solid .solid-left{
+	left: 18px;
+}
+section.solid .solid-right{
+	right: 18px;
+}
+section.solid .btn-list{
+	width: 180px;
+	height: 2px;
+	position: absolute;
+	left: 0;
+	right: 0;
+	margin-left: auto;
+	margin-right: auto;
+	bottom: 33px;
+}
+section.solid .btn-list li{
+	width: 50px;
+	height: 2px;
+	background: #1D1E20;
+	float: left;
+	margin-right: 15px;
+	cursor: pointer;
+}
+section.solid .btn-list li:last-child{
+	margin-right: 0;
+}
+
+
+/*变换块*/
+section.lump{
+	width: 100%;
+	height: 272px;
+}
+section.lump ul{
+	width: 100%;
+	height: 100%;
+}
+section.lump ul li{
+	height: 100%;
+	box-sizing: border-box;
+	border: 2px solid #fff;
+	float: left;
+}
+section.lump ul li{
+	border-left:none;
+	}
+section.lump ul li:nth-of-type(4){
+	border-right:none;
+}
+section.lump ul li a{
+	display: block;
+	width: 100%;
+	height: 100%;
+}
+/*txt文字*/
+section.txt{
+	margin: 0 auto;
+	overflow: hidden;
+}
+section.txt .box{
+	padding: 14px 0 12px;
+	border-bottom: 1px solid #ccc;
+}
+section.txt p{
+	text-align: left;
+	font-size: 12px;
+	color: #888;
+	line-height: 20px;
+}
+/*链接块*/
+nav{
+	
+}
+nav .link-nav{
+	overflow: hidden;
+	height: 246px;
+	margin: 0 auto;
+	padding: 40px 0 0;
+}
+nav .link-nav .link-box{
+	/*padding: 0 24px;*/
+}
+nav .link-nav .item{
+	width: 20%;
+	float: left;
+}
+nav .link-nav .item h1:nth-of-type(2){
+	padding-top: 24px;
+}
+nav .link-nav .item h1{
+	font-size: 12px;
+	text-align: left;
+}
+nav .link-nav .item ul{
+	
+}
+nav .link-nav .item ul li{
+	float: none;
+	text-align: left;
+}
+nav .link-nav .item ul li a{
+	font-size: 12px;
+	color: #000;
+}
+nav .link-nav .item ul li a:hover{
+	text-decoration: underline;
+}
+
+nav .sm-nav{
+	/*display: none;*/
+}
+.sm-nav{
+	height: 274px;
+}
+.sm-nav .sm-box{
+	
+}
+.sm-nav ul li{
+	height: 38px;
+	border-bottom: 1px solid #D6D6D6;
+	cursor: pointer;
+}
+.sm-nav ul li span{
+	font-size: 12px;
+	float: left;
+	line-height: 38px;
+}
+.sm-nav ul li strong{
+	font-size: 12px;
+	float: right;
+	margin-right: 8px;
+	line-height: 38px;
+}
+/*more*/
+section.more{
+	margin: 0 auto;
+	overflow: hidden;
+}
+section.more .more-box{
+	padding: 24px 0 10px;
+}
+section.more p{
+	text-align: left;
+	font-size: 12px;
+	color: #888;
+}
+section.more p a{
+	color: #0070C9;
+}
+section.more p a:hover{
+	text-decoration: underline;
+}
+/*copy*/
+.copy1{
+	
+	margin: 0 auto;
+	padding: 10px 0px;
+}
+
+.copy1 .copy-box{
+	overflow: hidden;
+}
+.copy1 .copy-box p{
+	text-align: left;
+	font-size: 12px;
+	color: #A7ADB4;
+	float: left;
+}
+.copy1 .copy-box .lj{
+	text-align: left;
+	font-size: 12px;
+	float: left;
+}
+.copy1 .copy-box .lj ul li{
+	float: left;
+}
+.copy1 .copy-box .lj ul li a{
+	font-size: 12px;
+	color: #555;
+	padding-right: 12px;
+	border-right: 1px solid #D6D6D6;
+	margin-left: 12px;
+}
+.copy1 .copy-box .lj ul li a:hover{
+	text-decoration: underline;
+}
+.copy1 .copy-box .lj ul li:nth-child(5) a{
+	padding-right: 0;
+	border-right: none;
+}
+.copy1 .copy-box .china{
+	
+	float: right;
+}
+.copy1 .copy-box .china a:hover span{
+	text-decoration: underline;
+}
+.copy1 .copy-box .china a img{
+	float: left;
+	
+}
+.copy1 .copy-box .china a span{
+	float: left;
+	display: block;
+	width: 24px;
+	height: 12px;
+	text-align: center;
+	color: #555;
+	font-size: 12px;
+	line-height: 14px;
+}
+
+
+
+
+
+
+/*copy2s*/
+.copy2{
+	display: none;
+	padding: 10px 24px;
+	overflow: hidden;
+}
+.copy2 .copy-box{
+	
+}
+.copy2 .copy-box .china{
+	
+	display: block;
+}
+.copy2 .copy-box .china a img{
+	float: left;
+	margin-right: 5px;
+}
+.copy2 .copy-box .china a:hover span{
+	text-decoration: underline;
+}
+.copy2 .copy-box .china a span{
+	float: left;
+	display: block;
+	width: 24px;
+	height: 12px;
+	text-align: center;
+	color: #555;
+	font-size: 12px;
+	line-height: 14px;
+}
+.copy2 .copy-box p{
+	margin-top: 10px;
+	text-align: left;
+	font-size: 12px;
+	color: #A7ADB4;
+}
+.copy2 .copy-box .lj{
+	margin-top: -12px;
+	text-align: left;
+	font-size: 12px;
+}
+.copy2 .copy-box .lj ul li{
+	float: left;
+}
+.copy2 .copy-box .lj ul li a{
+	font-size: 12px;
+	color: #555;
+	padding-right: 12px;
+	border-right: 1px solid #D6D6D6;
+	margin-left: 12px;
+}
+.copy2 .copy-box .lj ul li a:hover{
+	text-decoration: underline;
+}
+.copy2 .copy-box .lj ul li:nth-child(1) a{
+	margin-left: 0;
+}
+.copy2 .copy-box .lj ul li:nth-child(5) a{
+	padding-right: 0;
+	border-right: none;
+	
+}
+.foot{
+	display: block;
+	height: 30px;
+	line-height: 12px;
+	margin-top: 5px;
+	overflow: hidden;
+	margin: 0 auto;	
+}
+.foot p{
+	display: block;
+	color: #B39A99;
+	font-size: 12px;
+	text-align: left;
+}
+.foot p a{
+	color: #b39A99;
+}
+.foot p a:hover{
+	text-decoration: underline;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*设备  	 屏幕   						阈值*/
+/*大于1024px*/
+@media screen and (min-width: 1024px) {
+	.banner main{
+		width: 976px;
+	}
+	nav ul.nav-pc{
+		width: 976px;
+	}
+	section.solid{
+		height: 556px;
+	}
+	section.solid ul.solid-img li a{
+		background: url(../img/iphone_alt_large.jpg) no-repeat center center;
+		background-size: cover;
+	}
+	section.lump ul li{
+		width: 25%;
+	}
+	section.lump ul li:nth-child(1) a{
+		background: url(../img/accessibility_large.jpg) no-repeat center center;
+		background-size: cover;
+	}
+	section.lump ul li:nth-child(2) a{
+		background: url(../img/airpods_large.jpg) no-repeat center center;
+		background-size: cover;
+	}
+	section.lump ul li:nth-child(3) a{
+		background: url(../img/iphone_upgrade_large.jpg) no-repeat center center;
+		background-size: cover;
+	}
+	section.lump ul li:nth-child(4) a{
+		background: url(../img/macbookpro_large.jpg) no-repeat center center;
+		background-size: cover;
+	}
+	
+	section.txt{
+		width: 976px;
+	}
+	.link-nav{
+		width: 976px;
+	}
+	.sm-nav{
+		display: none;
+	}
+	section.more{
+		width: 976px;
+	}
+	section.more .more-box{
+		border-bottom: 1px solid #ccc;
+	}
+	.copy1{
+		display: block;
+		width: 976px;
+	}
+	.copy2{
+		display: none;
+	}
+	.foot{
+		width: 976px;
+	}
+		
+}
+/*小于1024px*/
+@media screen and (max-width: 1024px) {
+	
+	.banner main{
+		padding: 0 24px;
+	}
+	nav ul.nav-pc{
+		padding: 0 24px;
+	}
+	nav ul.nav-ipad{
+		padding: 0 24px;
+		display: none;
+	}
+	section.txt{
+		padding: 0 24px;
+	}
+	.link-nav{
+		padding: 0 24px;
+	}
+	.sm-nav{
+		display: none;
+	}
+	section.more{
+		padding: 0 24px;
+	}
+	section.more .more-box{
+		border-bottom: 1px solid #ccc;
+	}
+	.copy1{
+		display: block;
+		padding: 10px 24px;
+	}
+	.copy2{
+		display: none;
+	}
+	.foot{
+		padding: 0 24px;
+	}
+}
+/*大于768px 小于1024px*/
+@media screen and (min-width: 768px) and (max-width: 1024px){
+	section.solid{
+		height: 360px;
+	}
+	section.solid ul.solid-img li a{
+		background: url(../img/iphone_alt_medium.jpg) no-repeat center center;
+		background-size: cover;
+	}
+	section.lump ul li{
+		width: 50%;
+	}
+	section.lump ul li:nth-of-type(2){
+		border-right:none;
+	}
+	section.lump ul li:nth-child(3),section.lump ul li:nth-child(4){
+		border-top:none;
+	}
+	section.lump ul li:nth-child(1) a{
+		background: url(../img/accessibility_medium.jpg) no-repeat center center;
+		background-size: cover;
+	}
+	section.lump ul li:nth-child(2) a{
+		background: url(../img/airpods_medium.jpg) no-repeat center center;
+		background-size: cover;
+	}
+	section.lump ul li:nth-child(3) a{
+		background: url(../img/iphone_upgrade_medium.jpg) no-repeat center center;
+		background-size: cover;
+	}
+	section.lump ul li:nth-child(4) a{
+		background: url(../img/macbookpro_medium.jpg) no-repeat center center;
+		background-size: cover;
+	}
+	section.txt{
+		padding: 0 24px;
+	}
+	.link-nav{
+		padding: 0 24px;
+	}
+	nav .link-nav .link-box{
+		padding: 0 24px;
+	}
+	section.more{
+		padding: 0 24px;
+	}
+	section.more .more-box{
+		border-bottom: 1px solid #ccc;
+	}
+	.copy1{
+		display: block;
+		
+	}
+	.copy2{
+		display: none;
+	}
+}
+/*小于768px*/
+@media screen and (max-width: 768px) {
+	nav.nav-top ul.nav-pc{
+		display: none;
+	}
+	nav.nav-top ul.nav-ipad{
+		display: block;
+	}
+	section.solid{
+		height: 324px;
+	}
+	section.solid ul.solid-img li a{
+		background: url(../img/iphone_alt_small.jpg) no-repeat center center;
+		background-size: cover;
+	}
+	section.lump ul li{
+		width: 100%;
+	}
+	section.lump ul li{
+		border-right:none;
+		border-left: none;
+	}
+	section.lump ul li:nth-child(2),section.lump ul li:nth-child(3),section.lump ul li:nth-child(4){
+		border-top: none;
+	}
+	section.lump ul li:nth-child(1) a{
+		background: url(../img/accessibility_medium.jpg) no-repeat center center;
+		background-size: cover;
+	}
+	section.lump ul li:nth-child(2) a{
+		background: url(../img/airpods_medium.jpg) no-repeat center center;
+		background-size: cover;
+	}
+	section.lump ul li:nth-child(3) a{
+		background: url(../img/iphone_upgrade_medium.jpg) no-repeat center center;
+		background-size: cover;
+	}
+	section.lump ul li:nth-child(4) a{
+		background: url(../img/macbookpro_medium.jpg) no-repeat center center;
+		background-size: cover;
+	}
+	nav.nav-bottom .link-nav{
+		display: none;
+	}
+	nav.nav-bottom .sm-nav{
+		display: block;
+		padding: 0 24px;
+	}
+	section.more .more-box{
+		border-bottom: none;
+	}
+	.copy1{
+		display: none;
+	}
+	.copy2{
+		display: block;
+	}
+	.foot{
+		padding: 0 24px;
+	}
+}
+
