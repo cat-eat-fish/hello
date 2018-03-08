@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        #myBox{
+            width: 270px;
+            height: 270px;
+            margin: 100px auto;
+        }
+        #box{
+            width: 100%;
+            height: 100%;
+            perspective: 270px;
+        }
+        #box>div{
+            width: 33.3%;
+            height: 33.3%;
+            float: left;
+            border-radius: 3px;
+            transform-style: preserve-3d;
+            /*transform: rotateX(-30deg) rotateY(45deg) rotateZ(0deg);*/
+        }
+        #box>div>div{
+            width: 100%;
+            height: 100%;
+            opacity: 0.5;
+            border-radius: 10px;
+            position: absolute;
+            border: 1px solid #000;
+        }
+        .nextDiv0{
+            transform: translateZ(45px);
+        }
+        .nextDiv1{
+            transform: translateZ(-45px) rotateY(180deg);
+        }
+        .nextDiv2{
+            transform: translateX(-45px) rotateY(-90deg);
+        }
+        .nextDiv3{
+            transform: translateX(45px) rotateY(90deg);
+        }
+        .nextDiv4{
+            transform: translateY(-45px) rotateX(90deg);
+        }
+        .nextDiv5{
+            transform: translateY(45px) rotateX(-90deg);
+        }
+    </style>
+</head>
+<body>
+    <div id="myBox">
+        <div id="box">
+
+        </div>
+    </div>
+</body>
+</html>
+<script>
+    var myBox=document.getElementById('myBox');
+    var box=document.getElementById('box');
+    var body=document.getElementsByTagName('body')[0];
+    var imgs=['img1.jpg','img2.jpg','img3.jpg','img4.jpg','img5.jpg','img6.jpg','img7.jpg','img8.jpg','img9.jpg'];
+    //创建九宫格元素
+    for(var i=0;i<9;i++){
+        var div=document.createElement('div');
+        div.setAttribute('class','div'+i);
+//        div.style.background=myColor();
+        div.style.background='url("img/'+imgs[i]+'") no-repeat';
+        div.style.backgroundSize='90px 90px';
+        var thisColor=myColor();
+        box.appendChild(div);
+        for(var j=0;j<6;j++){
+            var nextDiv=document.createElement('div');
+            nextDiv.setAttribute('class','nextDiv'+j);
+            nextDiv.style.background=thisColor;
+            div.appendChild(nextDiv);
+        }
+    }
+    //鼠标滑动  --》 移动
+    var moveDiv=document.querySelectorAll('#box div[class^="div"]');
+    var sum=2;
+    body.onmousemove= move;
+    function move(e){
+        var x=e.pageX;
+        var y=e.pageY;
+        var w= window.body.offsetWidth;
+        if(x+50>=w/2){
+            for(var i=0;i<moveDiv.length;i++){
+                moveDiv[i].style.transform='rotateY('+sum+'deg)';
+            }
+            sum+=2;
+        }else if(x/2-50<=w/2){
+            for(var i=0;i<moveDiv.length;i++){
+                moveDiv[i].style.transform='rotateY('+sum+'deg)';
+            }
+            sum-=2;
+        }
+    }
+    function createBox(){
+        var box=document.createElement('div');
+        box.id='box';
+        myBox.appendChild(box);
+        for(var i=0;i<9;i++){
+            var div=document.createElement('div');
+            div.setAttribute('class','div'+i);
+//            div.style.background=myColor();
+            div.style.background='url("img/'+imgs[i]+'") no-repeat';
+            div.style.backgroundSize='90px 90px';
+            var thisColor=myColor();
+            box.appendChild(div);
+            for(var j=0;j<6;j++){
+                var nextDiv=document.createElement('div');
+                nextDiv.setAttribute('class','nextDiv'+j);
+                nextDiv.style.background=thisColor;
+                div.appendChild(nextDiv);
+            }
+        }
+    }
+    function myColor(){
+        var r=Math.floor(Math.random()*255);
+        var g=Math.floor(Math.random()*255);
+        var b=Math.floor(Math.random()*255);
+        return 'rgb('+r+','+g+','+b+')';
+    }
+    myBox.onclick=function(){
+        createBox();
+        var box=document.getElementById('box');
+        var body=document.getElementsByTagName('body')[0];
+        myBox.removeChild(box);
+    };
+</script>
