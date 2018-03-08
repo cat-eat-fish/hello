@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		select{
+			margin: 5px;
+			width: 200px;
+			height: 30px
+		}
+		img{
+			width: 100px;
+			display: none;
+		}
+	</style>
+</head>
+<body>
+	<span>我的城市：</span>
+	<select name="sheng" id="sheng">
+		<option value="">请选择</option>
+	</select>
+	<select name="shi" id="shi">
+		<option value="">请选择</option>
+	</select>
+	<select name="xian" id="xian">
+		<option value="">请选择</option>
+	</select>
+	<img src="img/113.gif" alt="">
+	<p></p>
+</body>
+</html>
+<script src="js/jquery-3.1.1.js"></script>
+<script>
+	$(function(){
+		$.ajax({
+			url:'http://api.jisuapi.com/area/province?appkey=c1a636a7130b709e',
+			dataType:'jsonp',
+			success:function(data){
+				let arr=data.result;
+				let str=``;
+				arr.forEach(function(val){
+					str+=`<option value=${val.id}>${val.name}</option>`;
+				})
+				$('#sheng').append(str);
+				$('img').hide();
+			},
+			beforeSend:function(){
+                $('img').show();
+            }
+		})
+	})
+	$('#sheng').change(function(){
+		$('#shi').children().remove();
+		$('#xian').children().remove();
+		var a=$('#sheng option').eq($(this).get(0).selectedIndex).val();
+		$.ajax({
+			url:'http://api.jisuapi.com/area/city?parentid='+a+'&appkey=c1a636a7130b709e',
+			dataType:'jsonp',
+			success:function(data){
+				let arr=data.result;
+				let str=``;
+				for(var i=0;i<arr.length;i++){
+					str+=`<option value=${arr[i].id}>${arr[i].name}</option>`;	
+				}
+				$('#shi').append(str);
+				$('img').hide();
+			},
+			beforeSend:function(){
+                $('img').show();
+            }
+		})
+	})
+	$('#shi').change(function(){
+		$('#xian').children().remove();
+		var a=$('#shi option').eq($(this).get(0).selectedIndex).val();
+		$.ajax({
+			url:'http://api.jisuapi.com/area/town?parentid='+a+'&appkey=c1a636a7130b709e',
+			dataType:'jsonp',
+			success:function(data){
+				let arr=data.result;
+				let str=``;
+				for(var i=0;i<arr.length;i++){
+					str+=`<option value=${arr[i].id}>${arr[i].name}</option>`;	
+				}
+				$('#xian').append(str);
+				$('img').hide();
+
+			},
+			beforeSend:function(){
+                $('img').show();
+            }
+		})
+	})
+	// $('#xian').change(function(){
+
+	// 	txt()
+	// })
+	// function txt(){
+	// 	$('p').html('我的城市：'+$('#sheng option:selected').text()+'--'+$('#shi option:selected').text()+'--'+$('#xian option:selected').text());
+	// }
+
+
+</script>
