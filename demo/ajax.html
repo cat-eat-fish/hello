@@ -18,13 +18,13 @@
 <body>
 	<span>我的城市：</span>
 	<select name="sheng" id="sheng">
-		<option value="">请选择</option>
+		<option disabled selected value="">请选择</option>
 	</select>
 	<select name="shi" id="shi">
-		<option value="">请选择</option>
+		<option disabled selected  value="">请选择</option>
 	</select>
 	<select name="xian" id="xian">
-		<option value="">请选择</option>
+		<option disabled selected value="">请选择</option>
 	</select>
 	<img src="img/113.gif" alt="">
 	<p></p>
@@ -38,6 +38,7 @@
 			dataType:'jsonp',
 			success:function(data){
 				let arr=data.result;
+				//forEach方式添加
 				let str=``;
 				arr.forEach(function(val){
 					str+=`<option value=${val.id}>${val.name}</option>`;
@@ -51,19 +52,21 @@
 		})
 	})
 	$('#sheng').change(function(){
-		$('#shi').children().remove();
-		$('#xian').children().remove();
-		var a=$('#sheng option').eq($(this).get(0).selectedIndex).val();
+		$('#shi option:enabled').add('#xian option:enabled').remove();
+		$('#shi').add('#xian').html(function(ind,val){return val})
+		var a=$(this).val();
 		$.ajax({
 			url:'http://api.jisuapi.com/area/city?parentid='+a+'&appkey=c1a636a7130b709e',
 			dataType:'jsonp',
 			success:function(data){
 				let arr=data.result;
-				let str=``;
-				for(var i=0;i<arr.length;i++){
-					str+=`<option value=${arr[i].id}>${arr[i].name}</option>`;	
-				}
-				$('#shi').append(str);
+				//html + map 方法添加
+				$('#shi').html(function(index,oldhtml){
+					let ar=arr.map(function(val){
+						return "<option value="+val.id+">"+val.name+"</option>";
+					})
+					return oldhtml+ar.join("");
+				})
 				$('img').hide();
 			},
 			beforeSend:function(){
@@ -72,13 +75,15 @@
 		})
 	})
 	$('#shi').change(function(){
-		$('#xian').children().remove();
-		var a=$('#shi option').eq($(this).get(0).selectedIndex).val();
+		$('#xian option:enabled').remove();
+		$('#xian').html(function(ind,val){return val})
+		var a=$(this).val();
 		$.ajax({
 			url:'http://api.jisuapi.com/area/town?parentid='+a+'&appkey=c1a636a7130b709e',
 			dataType:'jsonp',
 			success:function(data){
 				let arr=data.result;
+				//js方式添加
 				let str=``;
 				for(var i=0;i<arr.length;i++){
 					str+=`<option value=${arr[i].id}>${arr[i].name}</option>`;	
