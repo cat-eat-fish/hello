@@ -3,6 +3,9 @@
 	<head>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+
+		<script src='js/swiper.min.js'></script>
+		<link rel="stylesheet" href="css/swiper.min.css">
 		<link rel="stylesheet" href="css/index.css" />
 		<script src="js/rem.js"></script>
 		<link rel="stylesheet" href="iconfont/iconfont.css" />
@@ -79,21 +82,27 @@
 		<!--内容-->
 		<div class="main">
 			<!--轮播图-->
-			<section class="slide">
-				<div class="bgimg">
-					<a href="">
-						<img src="img/new-img.png" alt="" />
-						<span><i class="iconfont icon-xiaohonghuaxiangao"></i>世界摄影文化交流展今日落幕</span>
-					</a>
+			<div class="swiper-container">
+				<div class="swiper-wrapper">
+					<div class="swiper-slide">
+						<img src="img/img-1.jpg" alt="">
+					</div>
+					<div class="swiper-slide">
+						<img src="img/img-2.jpg" alt="">
+					</div>
+					<div class="swiper-slide">
+						<img src="img/img-3.jpg" alt="">
+					</div>
+					<div class="swiper-slide">
+						<img src="img/img-4.jpg" alt="">
+					</div>
+					<div class="swiper-slide">
+						<img src="img/img-5.jpg" alt="">
+					</div>
 				</div>
-				<div class="dian">
-					<span class="active"></span>
-					<span></span>
-					<span></span>
-					<span></span>
-					<span></span>
-				</div>
-			</section>
+				<!-- Add Pagination -->
+				<div class="swiper-pagination"></div>
+			</div>
 			<!--列表-->
 			<section class="item">
 				<ul>
@@ -176,3 +185,10 @@
 		<footer></footer>
 	</body>
 </html>
+<script>
+    var swiper = new Swiper('.swiper-container', {
+        pagination: {
+            el: '.swiper-pagination',
+        },
+    });
+</script>

@@ -142,67 +142,74 @@ section.nav .xl i{
 }
 
 /*轮播图*/
-section.slide{
-	width: 100%;
+.swiper-container{
+	margin: 50px auto 0;
+}
+.swiper-container img{
 	height: 1.76rem;
-	background: red;
-	border-top: 0.01rem solid rgba(0,0,0,.3);
-	border-bottom: 0.01rem solid rgba(0,0,0,.5);
-	position: relative;
-}
-section.slide .bgimg{
-	z-index: 10;
 	width: 100%;
-	height: 100%;
-	position: absolute;
-	top: 0;
-	left: 0;
 }
-section.slide .bgimg a{
-	width: 100%;
-	height: 100%;
-}
-section.slide .bgimg a img{
-	width: 100%;
-	height: 100%;
-	position: absolute;
-	top: 0;
-	left: 0;
-}
-section.slide .bgimg a span{
-	display: block;
-	color: #fff;
-	font-size: 0.14rem;
-	position: absolute;
-	bottom: 0.13rem;
-	left: 0.13rem;
-}
-section.slide .bgimg a span i{
+/*section.slide{*/
+	/*width: 100%;*/
+	/*height: 1.76rem;*/
+	/*background: red;*/
+	/*border-top: 0.01rem solid rgba(0,0,0,.3);*/
+	/*border-bottom: 0.01rem solid rgba(0,0,0,.5);*/
+	/*position: relative;*/
+/*}*/
+/*section.slide .bgimg{*/
+	/*z-index: 10;*/
+	/*width: 100%;*/
+	/*height: 100%;*/
+	/*position: absolute;*/
+	/*top: 0;*/
+	/*left: 0;*/
+/*}*/
+/*section.slide .bgimg a{*/
+	/*width: 100%;*/
+	/*height: 100%;*/
+/*}*/
+/*section.slide .bgimg a img{*/
+	/*width: 100%;*/
+	/*height: 100%;*/
+	/*position: absolute;*/
+	/*top: 0;*/
+	/*left: 0;*/
+/*}*/
+/*section.slide .bgimg a span{*/
 	/*display: block;*/
-	width: 0.12rem;
-	height: 0.12rem;
-	font-size: 0.12rem;
-}
-section.slide .dian{
-	z-index: 99;
-	width: 0.4rem;
-	height: 0.06rem;
-	position: absolute;
-	bottom: 0.18rem;
-	right: 0.13rem;
-	display: flex;
-	justify-content: space-around;
-}
-section.slide .dian span{
-	display: block;
-	width: 0.06rem;
-	height: 0.06rem;
-	border-radius: 50%;
-	background: #999;
-}
-section.slide .dian span.active{
-	background: #fff;
-}
+	/*color: #fff;*/
+	/*font-size: 0.14rem;*/
+	/*position: absolute;*/
+	/*bottom: 0.13rem;*/
+	/*left: 0.13rem;*/
+/*}*/
+/*section.slide .bgimg a span i{*/
+	/*!*display: block;*!*/
+	/*width: 0.12rem;*/
+	/*height: 0.12rem;*/
+	/*font-size: 0.12rem;*/
+/*}*/
+/*section.slide .dian{*/
+	/*z-index: 99;*/
+	/*width: 0.4rem;*/
+	/*height: 0.06rem;*/
+	/*position: absolute;*/
+	/*bottom: 0.18rem;*/
+	/*right: 0.13rem;*/
+	/*display: flex;*/
+	/*justify-content: space-around;*/
+/*}*/
+/*section.slide .dian span{*/
+	/*display: block;*/
+	/*width: 0.06rem;*/
+	/*height: 0.06rem;*/
+	/*border-radius: 50%;*/
+	/*background: #999;*/
+/*}*/
+/*section.slide .dian span.active{*/
+	/*background: #fff;*/
+/*}*/
 /*列表*/
 section.item{
 	width: 100%;

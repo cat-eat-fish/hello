@@ -6,8 +6,8 @@
 		<link rel="stylesheet" href="font/iconfont.css" />
 		<meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
 		<title>apple</title>
-		<style type="text/css">
-		</style>
+		<script src='js/swiper.min.js'></script>
+		<link rel="stylesheet" href="css/swiper.min.css">
 	</head>
 	<body>
 		<!--顶部	广告条+导航-->
@@ -80,35 +80,60 @@
 				</nav>	
 		</header>
 		<!--轮播-->
-		<section class="solid">
-			<ul class="solid-img">
-				<li>
-					<a href="">
-						<h1>iPhone</h1>
-						<h2>7，在此。</h2>
-					</a>
-				</li>
-				<li>
-					<a href="">
-						<h1>iPad Pro</h1>
-						<h2>不只能做到<br />还能做的更好</h2>
-					</a>
-				</li>
-				<li>
-					<a href="">
-						<h1>每一天，</h1>
-						<h2>都可也更好。</h2>
-					</a>
-				</li>
-			</ul>
-			<div class="solid-left">&lt;</div>
-			<div class="solid-right">&gt;</div>
-			<ul class="btn-list">
-				<li></li>
-				<li></li>
-				<li></li>
-			</ul>
-		</section>
+		<!--<section class="solid">-->
+			<!--<ul class="solid-img">-->
+				<!--<li>-->
+					<!--<a href="">-->
+						<!--<h1>iPhone</h1>-->
+						<!--<h2>7，在此。</h2>-->
+					<!--</a>-->
+				<!--</li>-->
+				<!--<li>-->
+					<!--<a href="">-->
+						<!--<h1>iPad Pro</h1>-->
+						<!--<h2>不只能做到<br />还能做的更好</h2>-->
+					<!--</a>-->
+				<!--</li>-->
+				<!--<li>-->
+					<!--<a href="">-->
+						<!--<h1>每一天，</h1>-->
+						<!--<h2>都可也更好。</h2>-->
+					<!--</a>-->
+				<!--</li>-->
+			<!--</ul>-->
+			<!--<div class="solid-left">&lt;</div>-->
+			<!--<div class="solid-right">&gt;</div>-->
+			<!--<ul class="btn-list">-->
+				<!--<li></li>-->
+				<!--<li></li>-->
+				<!--<li></li>-->
+			<!--</ul>-->
+		<!--</section>-->
+		<div class="swiper-container">
+			<div class="swiper-wrapper">
+				<div class="swiper-slide">
+					<img src="img/slide1.jpg" alt=""/>
+				</div>
+				<div class="swiper-slide">
+					<img src="img/slide2.jpg" alt=""/>
+				</div>
+				<div class="swiper-slide">
+					<img src="img/slide3.jpg" alt=""/>
+				</div>
+				<div class="swiper-slide">
+					<img src="img/slide4.jpg" alt=""/>
+				</div>
+				<div class="swiper-slide">
+					<img src="img/slide5.jpg" alt=""/>
+				</div>
+			</div>
+			<!-- Add Pagination -->
+			<div class="swiper-pagination"></div>
+			<!-- Add Arrows -->
+			<div class="swiper-button-next"></div>
+			<div class="swiper-button-prev"></div>
+		</div>
+		</div>
 		<!--变化块-->
 		<section class="lump">
 			<ul class="item">
@@ -404,3 +429,87 @@
 		</section>
 	</body>
 </html>
+<script>
+	/* ========
+	 Debugger plugin, simple demo plugin to console.log some of callbacks
+	 ======== */
+    var myPlugin = {
+        name: 'debugger',
+        params: {
+            debugger: false,
+        },
+        on: {
+            init: function () {
+                if (!this.params.debugger) return;
+                console.log('init');
+            },
+            click: function (e) {
+                if (!this.params.debugger) return;
+                console.log('click');
+            },
+            tap: function (e) {
+                if (!this.params.debugger) return;
+                console.log('tap');
+            },
+            doubleTap: function (e) {
+                if (!this.params.debugger) return;
+                console.log('doubleTap');
+            },
+            sliderMove: function (e) {
+                if (!this.params.debugger) return;
+                console.log('sliderMove');
+            },
+            slideChange: function () {
+                if (!this.params.debugger) return;
+                console.log('slideChange', this.previousIndex, '->', this.activeIndex);
+            },
+            slideChangeTransitionStart: function () {
+                if (!this.params.debugger) return;
+                console.log('slideChangeTransitionStart');
+            },
+            slideChangeTransitionEnd: function () {
+                if (!this.params.debugger) return;
+                console.log('slideChangeTransitionEnd');
+            },
+            transitionStart: function () {
+                if (!this.params.debugger) return;
+                console.log('transitionStart');
+            },
+            transitionEnd: function () {
+                if (!this.params.debugger) return;
+                console.log('transitionEnd');
+            },
+            fromEdge: function () {
+                if (!this.params.debugger) return;
+                console.log('fromEdge');
+            },
+            reachBeginning: function () {
+                if (!this.params.debugger) return;
+                console.log('reachBeginning');
+            },
+            reachEnd: function () {
+                if (!this.params.debugger) return;
+                console.log('reachEnd');
+            },
+        },
+    };
+</script>
+
+<script>
+    // Install Plugin To Swiper
+    Swiper.use(myPlugin);
+
+    // Init Swiper
+    var swiper = new Swiper('.swiper-container', {
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+        },
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+        // Enable debugger
+        debugger: true,
+    });
+</script>
