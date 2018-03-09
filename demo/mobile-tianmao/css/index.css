@@ -66,6 +66,9 @@ header{
 	margin-top: 0.3rem;
 }
 /*轮播*/
+.swiper-container{
+	padding:52px 0 0;
+}
 .swiper-container {
       width: 100%;
       height: 2.22rem;
