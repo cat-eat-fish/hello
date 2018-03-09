@@ -120,12 +120,10 @@
 					for(var j=0;j<array.length;j++){
 						if(wst>=array[j]-600){
 							var index=j;
-							console.log(array[j]-600)
 							$('.fx-l ul li').eq(index).addClass('active').siblings().removeClass('active');
 						}
 					}
-					console.log(array[8]-300)
-					if(wst>array[8]-300 || wst<array[0]-300){
+					if(wst>array[6]-300 || wst<array[0]-300){
 						$('.fx-l ul li').removeClass('active')
 					}
 				});
